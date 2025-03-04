@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Basic styling for your App */
+.app {
+  position: relative;
+  height: 100vh; /* Ensure the app takes up the full height of the screen */
+  background-color: #f0f0f0; /* Example background */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 10px; /* Add padding around the app */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive for medium devices (tablets) */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px; /* More padding on smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+ 
+
+  .app .canvas-container {
+    width: 50%; /* Ensure the canvas takes up the full width */
+    height: 200px; /* Limit height for smaller screens */
+  }
+}
+
+/* Responsive for small devices (phones) */
+@media (max-width: 480px) {
+  .app {
+    padding: 15px; /* More padding for small screens */
+  }
+
+  .app .canvas-container {
+    width: 50%; /* Make sure canvas fits the screen */
+    height: 150px; /* Smaller canvas height for small screens */
+  }
+
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1024px) {
+  .app {
+    flex-direction: row; /* Place items side by side */
+    padding: 30px; /* More padding for large screens */
+  }
+
+
+  .app .canvas-container {
+    width: 60%; /* Give the canvas 60% of the width */
+    height: 300px; /* Larger height for large screens */
   }
 }
